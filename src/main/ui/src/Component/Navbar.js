@@ -11,7 +11,7 @@ function ColorSchemesExample() {
         <Container>
           <Navbar.Brand href="#home">Bank Admin Portal</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/menu">Home</Nav.Link>
             
           </Nav>
         </Container>
