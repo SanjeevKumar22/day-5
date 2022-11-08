@@ -9,3 +9,18 @@ export const authenticateLogin = async (user) => {
     console.log("Error while calling login API: ", error);
   }
 };
+
+export const addAcc = async (user) => {
+  try {
+    return await axios.post(`${url}/openAccount`, user);
+  } catch (error) {
+    console.log("Error while calling login API: ", error);
+  }
+};
+export const addBranch = async (user) => {
+  try {
+    return await axios.post(`${url}/addbranch`, user);
+  } catch (error) {
+    console.log("Error while calling login API: ", error);
+  }
+};

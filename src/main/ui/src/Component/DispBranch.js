@@ -67,24 +67,28 @@ const DispBranch = () => {
         </tr>
 
         {data.length > 0 ? (
-          data.map((a, index) => (
-            <tr data-index={index}>
-              <td>{a.branch_id}</td>
-              <td>{a.branch_city}</td>
-              <td>{a.branch_name}</td>
+          data.map((a, index) =>
+            a.branch_id != "" ? (
+              <tr data-index={index}>
+                <td>{a.branch_id}</td>
+                <td>{a.branch_city}</td>
+                <td>{a.branch_name}</td>
 
-              <td>
-                <Button
-                  className="bg-primary"
-                  type="submit"
-                  value="Submit"
-                  onClick={() => deleteBranch(a.branch_id)}
-                >
-                  delete
-                </Button>
-              </td>
-            </tr>
-          ))
+                <td>
+                  <Button
+                    className="bg-primary"
+                    type="submit"
+                    value="Submit"
+                    onClick={() => deleteBranch(a.branch_id)}
+                  >
+                    delete
+                  </Button>
+                </td>
+              </tr>
+            ) : (
+              ""
+            )
+          )
         ) : (
           <div>There is no branch details</div>
         )}
